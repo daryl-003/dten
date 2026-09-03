@@ -6,15 +6,21 @@ import Seo from "@/components/Seo";
 import AnimatedSplash from "@/components/AnimatedSplash";
 import { supabase } from "@/integrations/supabase/client";
 
-const timeSlots = ["9:00 AM", "10:00 AM", "11:00 AM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM"];
+const timeSlots = ["9:00 AM", "10:00 AM", "11:00 AM", "1:00 PM", "2:00 PM", "3:30 PM"];
 const serviceOptions = [
   "Web Development",
   "Mobile App Development",
+  "Internship Inquiry",
   "Cloud Solutions",
   "Cybersecurity",
-  "AI & Automation",
+  "Data Analysis",
+  "AI & Machine Learning",
   "IT Consulting",
+  "Vulnerability Assessment",
   "General Inquiry",
+  "Job Employment Inquiry",
+  "Partnership",
+  "Others",
 ];
 
 const Booking = () => {
@@ -86,7 +92,7 @@ const Booking = () => {
               Thank you, <span className="text-foreground font-medium">{form.name}</span>. We've received your consultation request.
             </p>
             <p className="text-sm text-muted-foreground">
-              Our team will reach out to <span className="text-foreground">{form.email}</span> within 24 hours to confirm your appointment.
+              Our team will reach out to <span className="text-foreground">{form.email}</span> within 24 - 48 hours to confirm your appointment.
             </p>
           </motion.div>
         </section>
@@ -96,14 +102,14 @@ const Booking = () => {
 
   return (
     <Layout>
-      <Seo title={"Book a Free Consultation | Daryl Tech"} description={"Schedule a free 30-minute consultation to discuss your project, explore solutions and get a tailored roadmap."} path="/booking" />
+      <Seo title={"Book a Free Consultation | Daryls Tech"} description={"Schedule a free 30-minute consultation to discuss your project, explore solutions and get a tailored roadmap."} path="/booking" />
       <section className="relative container mx-auto px-6 py-24 overflow-hidden">
         <AnimatedSplash intensity="soft" className="-z-10" />
         <div className="grid gap-16 lg:grid-cols-2">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <p className="mb-2 text-sm font-mono uppercase tracking-widest text-primary">Book a Call</p>
             <h1 className="mb-6 text-4xl font-bold md:text-5xl">
-              Book a Consultation with <span className="text-gradient">Daryl Tech</span>
+              Book a Consultation with <span className="text-gradient">Daryls Tech</span>
             </h1>
             <p className="mb-8 text-lg text-muted-foreground leading-relaxed">
               Schedule a free 30-minute consultation with our team. We'll discuss your project, explore solutions, and create a roadmap tailored to your needs.
@@ -115,23 +121,25 @@ const Booking = () => {
                   <li className="flex items-start gap-2"><CheckCircle size={14} className="mt-0.5 text-primary shrink-0" /> Discovery call to understand your goals</li>
                   <li className="flex items-start gap-2"><CheckCircle size={14} className="mt-0.5 text-primary shrink-0" /> Technical feasibility assessment</li>
                   <li className="flex items-start gap-2"><CheckCircle size={14} className="mt-0.5 text-primary shrink-0" /> Timeline and cost estimation</li>
-                  <li className="flex items-start gap-2"><CheckCircle size={14} className="mt-0.5 text-primary shrink-0" /> No obligation — completely free</li>
+                  <li className="flex items-start gap-2"><CheckCircle size={14} className="mt-0.5 text-primary shrink-0" /> No obligation. Completely free</li>
                 </ul>
               </div>
 
               {/* Google Form Embed */}
-              <div className="rounded-xl border border-border bg-card p-6">
-                <h2 className="mb-3 text-sm font-semibold">Or Book via Google Form</h2>
+                <div className="rounded-xl border border-border bg-card p-6">
+                <h3 className="mb-3 text-sm font-semibold">Or Book via Google Form</h3>
                 <div className="overflow-hidden rounded-lg border border-border">
-                  <iframe
-                    src="https://docs.google.com/forms/d/e/1FAIpQLSdExample/viewform?embedded=true"
-                    width="100%"
-                    height="400"
-                    className="border-0 bg-background"
-                    title="Booking Google Form"
-                  >
-                    Loading Google Form…
-                  </iframe>
+                  <a
+    href="https://docs.google.com/forms/d/e/1FAIpQLSflhJFOORGufdT4fhFj9vsllffOAmWsKRPUATXJtFZcno5wqA/viewform?usp=publish-editor"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-block px-6 py-3 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 transition"
+  >
+    Open Google Form
+  </a>
+  <p className="mt-3 text-xs text-muted-foreground">
+    Note: Booking  via Google Form will be processed within 24 to 48 hours. You'll receive your enrollment ID via email.
+  </p>
                 </div>
                 <p className="mt-2 text-xs text-muted-foreground">Prefer Google Forms? Submit your booking request above.</p>
               </div>

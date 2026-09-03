@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Briefcase, Building2, GraduationCap, Users, CheckCircle2, LogIn, Award, Handshake, Sparkles, Loader2, Send } from "lucide-react";
+import { ArrowRight, Clock, Users, Star, BookOpen, Code, Cloud, Shield, Brain, Smartphone, Monitor, LogIn, Briefcase, CreditCard, Loader2, Award, CheckCircle, Heart, FileSpreadsheet, Flag  } from "lucide-react";
 import Layout from "@/components/Layout";
 import Seo from "@/components/Seo";
 import AnimatedSplash from "@/components/AnimatedSplash";

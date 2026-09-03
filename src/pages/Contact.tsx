@@ -9,10 +9,10 @@ import { supabase } from "@/integrations/supabase/client";
 import heroImg from "@/assets/hero-training.jpg";
 
 const contactInfo = [
-  { icon: Mail, label: "Email", value: "hello@daryltech.com", href: "mailto:hello@daryltech.com" },
-  { icon: Phone, label: "Phone", value: "+1 (234) 567-890", href: "tel:+1234567890" },
-  { icon: MapPin, label: "Address", value: "123 Innovation Drive, San Francisco, CA 94105", href: null },
-  { icon: Clock, label: "Business Hours", value: "Mon – Fri: 9:00 AM – 6:00 PM PST", href: null },
+  { icon: Mail, label: "Email", value: "daryltecheducationalnetwork@gmail.com", href: "mailto:daryltecheducationalnetwork@gmail.com" },
+  { icon: Phone, label: "Phone", value: "+233 (209) 344-249", href: "tel:+233209344249" },
+  { icon: MapPin, label: "Address", value: "Ablekuma Curve, Accra - GHANA", href: null },
+  { icon: Clock, label: "Business Hours", value: "Mon – Fri: 9:00 AM – 3:30 PM GMT", href: null },
 ];
 
 const socials = [
@@ -75,7 +75,7 @@ const Contact = () => {
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="lg:col-span-8">
               <p className="mb-3 text-sm font-mono uppercase tracking-widest text-primary">— Say hello</p>
               <h1 className="mb-6 text-5xl font-bold leading-[1.05] md:text-7xl">
-                Contact Daryl Tech &amp; <span className="text-gradient">Educational Network</span>
+                Contact Daryls Tech &amp; <span className="text-gradient">Educational Network</span>
               </h1>
               <p className="max-w-xl text-lg text-muted-foreground">
                 Whether you have a defined project or a rough idea, our team responds within one business day.
@@ -84,8 +84,8 @@ const Contact = () => {
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }} className="lg:col-span-4">
               <div className="rounded-xl border border-border bg-card/60 backdrop-blur p-6">
                 <p className="mb-1 text-xs font-mono uppercase tracking-widest text-primary">Response time</p>
-                <p className="text-2xl font-bold">&lt; 24 hours</p>
-                <p className="mt-2 text-sm text-muted-foreground">All inquiries reviewed by a senior engineer.</p>
+                <p className="text-2xl font-bold">&lt; 24 to 48 hours</p>
+                <p className="mt-2 text-sm text-muted-foreground">All inquiries reviewed by an expert.</p>
               </div>
             </motion.div>
           </div>
@@ -122,7 +122,7 @@ const Contact = () => {
               <div className="rounded-xl border border-border bg-card p-12 text-center">
                 <CheckCircle className="mx-auto mb-4 h-14 w-14 text-primary" />
                 <h3 className="mb-2 text-2xl font-bold">Message Sent</h3>
-                <p className="text-sm text-muted-foreground">We'll get back to you within 24 hours.</p>
+                <p className="text-sm text-muted-foreground">We'll get back to you within 24 to 48 hours.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5 rounded-xl border border-border bg-card p-8">
@@ -132,11 +132,11 @@ const Contact = () => {
                 <div className="grid gap-5 md:grid-cols-2">
                   <div>
                     <label className="mb-1.5 block text-sm font-medium">Full Name</label>
-                    <input type="text" name="name" required maxLength={100} value={form.name} onChange={handleChange} placeholder="Jane Doe" className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
+                    <input type="text" name="name" required maxLength={100} value={form.name} onChange={handleChange} placeholder="Daryls Tech " className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
                   </div>
                   <div>
                     <label className="mb-1.5 block text-sm font-medium">Email</label>
-                    <input type="email" name="email" required maxLength={255} value={form.email} onChange={handleChange} placeholder="jane@company.com" className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
+                    <input type="email" name="email" required maxLength={255} value={form.email} onChange={handleChange} placeholder="darylstech@company.com" className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" />
                   </div>
                 </div>
                 <div>
@@ -159,9 +159,13 @@ const Contact = () => {
             <h2 className="text-3xl font-bold md:text-4xl">Come say hi.</h2>
             <div className="overflow-hidden rounded-xl border border-border">
               <iframe
-                title="Daryl Tech Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509374!2d-122.4194154!3d37.7749295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064e1c56eab%3A0x70234e91fca3fa93!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
-                width="100%" height="400" style={{ border: 0 }} allowFullScreen loading="lazy"
+                title="Daryls Tech Location"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15882.407142833892!2d-0.3186273!3d5.6256547!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdfa213a683a001%3A0x73f0536070c8ebcd!2sAblekuma%20curve!5e0!3m2!1sen!2sgh!4v1771543621952!5m2!1sen!2sgh"
+                width="100%"
+                height="300"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
               />

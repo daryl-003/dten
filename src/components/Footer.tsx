@@ -37,7 +37,7 @@ const socials = [
   { icon: Facebook, href: "https://www.facebook.com/daryltecheducationalnetwork", label: "Facebook" },
   { icon: Linkedin, href: "https://www.linkedin.com/company/daryl-tech-educational-network", label: "LinkedIn" },
   { icon: Twitter, href: "https://x.com/daryl_tech", label: "X" },
-  { icon: MessageCircle, href: "https://wa.me/233509147164", label: "WhatsApp" },
+  { icon: MessageCircle, href: "https://wa.me/+233509147164", label: "WhatsApp" },
 ];
 
 const Footer = () => {
@@ -51,7 +51,7 @@ const Footer = () => {
               <img src={logoAsset.url} alt="Daryl Tech" className="h-10 w-auto object-contain" />
             </Link>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
-              Building the future of tech through world-class engineering and next-generation education across Africa.
+              Building the future of tech through world-class engineering and next-generation education across Africa and beyond.
             </p>
             <div className="mt-6 space-y-2 text-sm text-muted-foreground">
               <a href="mailto:daryltecheducationalnetwork@gmail.com" className="flex items-center gap-2 hover:text-primary">

@@ -55,9 +55,9 @@ const sidebarGroups = [
 ];
 
 const COURSES = [
-  "Web Development", "Data Science", "Cybersecurity",
-  "Mobile App Development", "AI & Machine Learning", "Cloud Computing",
-  "UI/UX Design", "Digital Marketing",
+  "Full-Stack Web Development", "Data Science & Analytics", "Cybersecurity Fundamentals", "Excel", "Linux Administration", "Ethical Hacking Essentials",
+  "Mobile App Development", "AI & Machine Learning", "Cloud Computing", "Prompt Engineering", "IT Support", "Networking Essentials",
+  "UI/UX Design", "Introduction to Python", "Database and Management Systems", "Graphic Design with AI", "Typescript, React and Javascript",
 ];
 
 function generateEnrollmentId() {

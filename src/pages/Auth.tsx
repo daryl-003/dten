@@ -7,7 +7,7 @@ import { InputOTP, InputOTPGroup, InputOTPSlot } from "@/components/ui/input-otp
 import { supabase } from "@/integrations/supabase/client";
 import { lovable } from "@/integrations/lovable/index";
 import { useToast } from "@/hooks/use-toast";
-import darylLogo from "@/assets/daryl-tech-logo.png";
+import darylLogo from "@/assets/daryltech-auth-logo.jpg";
 
 
 const Auth = () => {
