@@ -30,7 +30,7 @@ interface BlogPost {
 const emptyPost = {
   title: "", excerpt: "", content: "", category: "",
   image_url: "", video_url: "", read_time: "5 min read",
-  published: false, author_name: "Darryl Thompson", author_role: "CEO & Founder",
+  published: false, author_name: "Media Team", author_role: "Media & Communication",
 };
 
 const BlogAdmin = () => {
