@@ -27,16 +27,16 @@ const expertise = [
 ];
 
 const stats = [
-  { value: "150+", label: "Projects Delivered" },
-  { value: "10K+", label: "Students Trained" },
-  { value: "12+", label: "Years Experience" },
-  { value: "99.9%", label: "Uptime SLA" },
+  { value: "2+", label: "Projects Delivered" },
+  { value: "5K+", label: "Students Trained" },
+  { value: "5+", label: "Years Experience" },
+  { value: "89.9%", label: "Uptime Guranteed" },
 ];
 
 const testimonials = [
   { quote: "Daryl Tech transformed our infrastructure. Their team is responsive, knowledgeable and relentless about quality.", name: "Jeffery Stillman", role: "Operations Lead" },
   { quote: "Enrolling in the academy was one of the best career decisions I made. Hands-on, real-world, taught by professionals.", name: "Daria A.", role: "Software Engineer" },
-  { quote: "Their cybersecurity work is best-in-class. Proactive, structured, and built around real threat models.", name: "Danny Glover", role: "CISO" },
+  { quote: "Their cybersecurity work is best-in-class. Proactive, structured, and built around real threat models.", name: "Danny Glover", role: "General Manager" },
 ];
 
 const Index = () => {
@@ -56,7 +56,7 @@ const Index = () => {
 
   return (
     <Layout fullBleed>
-      <Seo title={"Daryl Tech & Educational Network — IT Solutions & Tech Education"} description={"Software engineering, cloud, cybersecurity and AI services plus hands-on tech courses and internships from Accra, Ghana."} path="/" jsonLd={[
+      <Seo title={"Daryl Tech & Educational Network: IT Solutions & Tech Education"} description={"Software engineering, cloud, cybersecurity and AI services plus hands-on tech courses and internships from Accra, Ghana."} path="/" jsonLd={[
         { "@context": "https://schema.org", "@type": "Organization", name: "Daryl Tech & Educational Network", url: "https://darryls-digital-spark.lovable.app/", email: "daryltecheducationalnetwork@gmail.com", telephone: "+233509147164", address: { "@type": "PostalAddress", addressLocality: "Accra", addressCountry: "GH" }, sameAs: ["https://www.instagram.com/daryltech_official", "https://www.facebook.com/daryltecheducationalnetwork", "https://www.linkedin.com/company/daryl-tech-educational-network", "https://x.com/daryl_tech"] },
         { "@context": "https://schema.org", "@type": "WebSite", name: "Daryl Tech & Educational Network", url: "https://darryls-digital-spark.lovable.app/" },
       ]} />
@@ -86,7 +86,7 @@ const Index = () => {
             </p>
             <h1 className="text-5xl font-bold leading-[0.95] tracking-tight text-foreground md:text-7xl lg:text-[8rem]">
               Daryl Tech & Educational Network<br />
-              <span className="text-gradient">Technology</span> &amp; Education in Ghana
+              <span className="text-gradient">Technology</span> &amp; Education in Ghana and Beyond
             </h1>
             <p className="mt-8 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
               Comprehensive digital solutions tailored to optimise your business, blending cutting-edge engineering with world-class education for the next generation of African tech leaders.
@@ -133,7 +133,7 @@ const Index = () => {
               <Briefcase className="mr-2 inline h-3.5 w-3.5" /> // Now Recruiting — Fall Cohort
             </p>
             <h2 className="text-3xl font-bold leading-[1.05] tracking-tight md:text-5xl">
-              Paid <span className="text-gradient">Internships</span> at Daryl Tech — apply today.
+              Paid & Free <span className="text-gradient">Internships</span> at Daryl Tech, apply today.
             </h2>
             <p className="mt-4 max-w-2xl text-muted-foreground leading-relaxed">
               Work on live projects with senior mentors across Engineering, AI, Cloud and Security. Stipend, certificate, and a real path to full-time offers.
@@ -149,8 +149,8 @@ const Index = () => {
           </div>
           <div className="grid grid-cols-2 gap-3 text-center">
             {[
-              { n: "4", l: "Tracks" },
-              { n: "32", l: "Slots / Cohort" },
+              { n: "10+", l: "Tracks" },
+              { n: "50+", l: "Slots / Cohort" },
               { n: "3–6mo", l: "Duration" },
               { n: "90%", l: "Placement Rate" },
             ].map((s) => (
@@ -235,12 +235,12 @@ const Index = () => {
               Launch your <span className="text-gradient">tech career</span> with real-world training.
             </h2>
             <p className="mb-8 max-w-lg text-muted-foreground leading-relaxed">
-              Industry-leading courses in web development, AI, cloud engineering and cybersecurity — taught by professionals shipping in production. Hands-on projects, certificates and internship pathways included.
+              Industry-leading courses in web development, AI, cloud engineering and cybersecurity  taught by professionals shipping in production. Hands-on projects, certificates and internship pathways included.
             </p>
             <div className="mb-10 grid grid-cols-2 gap-4 md:gap-6">
               {[
-                { num: "6+", label: "Certified Courses" },
-                { num: "10K+", label: "Students Enrolled" },
+                { num: "12+", label: "Certified Courses" },
+                { num: "2K+", label: "Students Enrolled" },
                 { num: "95%", label: "Completion Rate" },
                 { num: "4.9", label: "Avg. Rating" },
               ].map((s) => (
@@ -276,7 +276,7 @@ const Index = () => {
                 Together, we'll build the <span className="text-gradient">future</span>.
               </h2>
               <p className="mt-6 max-w-xl text-muted-foreground leading-relaxed">
-                We believe in the power of collaboration to drive innovation. Whether you're enhancing efficiency, streamlining processes or embracing new technologies — we partner with you end to end with a shared commitment to excellence.
+                We believe in the power of collaboration to drive innovation. Whether you're enhancing efficiency, streamlining processes or embracing new technologies, we partner with you end to end with a shared commitment to excellence.
               </p>
               <Link to="/contact" className="mt-8 inline-flex items-center gap-3 rounded-full bg-gradient-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground transition-transform hover:scale-[1.03]">
                 Contact Us <ArrowUpRight size={15} />
