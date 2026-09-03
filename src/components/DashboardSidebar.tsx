@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, LogOut, ChevronLeft, ChevronRight, Sun, Moon } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { useTheme } from "@/components/ThemeProvider";
-import logoAsset from "@/assets/daryl-tech-logo.png.asset.json";
+import logoAsset from "@/assets/daryl-tech-logo.png";
 const logo = logoAsset.url;
 
 export interface NavItem {
