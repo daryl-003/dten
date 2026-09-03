@@ -262,7 +262,7 @@ const Enroll = () => {
     Note: Enrollments via Google Form will be processed within 24 to 48 hours. You'll receive your enrollment ID via email.
   </p>
           </motion.div>
-        </div>
+    
         </div>
       </section>
     </Layout>
