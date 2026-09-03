@@ -1,0 +1,19 @@
+# Daryl Tech & Educational Network
+
+> A Ghanaian technology studio and academy: software engineering, cloud, cybersecurity and AI services, plus hands-on tech courses and internships.
+
+## Pages
+
+- [Home](/): Overview of services, courses and internships.
+- [Services](/services): Web, mobile, cloud, cybersecurity, data and AI delivery.
+- [Courses](/courses): Mentor-led tech training programs with certificates.
+- [Internships](/internships): Internship programs and application details.
+- [Portfolio](/portfolio): Selected client work and case studies.
+- [About](/about): Who we are, what we do and our core values.
+- [Blog](/blog): Essays and field notes on technology and building software.
+- [Contact](/contact): Contact details and enquiry form.
+
+## Optional
+
+- [Book a call](/booking): Schedule a free 30-minute consultation.
+- [Verify enrollment](/courses/verify): Check an enrollment ID or certificate.
