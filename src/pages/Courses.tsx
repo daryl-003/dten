@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Clock, Users, Star, BookOpen, Code, Cloud, Shield, Brain, Smartphone, Monitor, LogIn, Briefcase, CreditCard, Loader2 } from "lucide-react";
+import { ArrowRight, Clock, Users, Star, BookOpen, Code, Cloud, Shield, Brain, Smartphone, Monitor, LogIn, Briefcase, CreditCard, Loader2, Award, CheckCircle, Heart, FileSpreadsheet, Flag} from "lucide-react";
 import Layout from "@/components/Layout";
 import Seo from "@/components/Seo";
 import AnimatedSplash from "@/components/AnimatedSplash";
@@ -12,12 +12,21 @@ import { useToast } from "@/hooks/use-toast";
 import ghanaStudentsImg from "@/assets/ghana-students-lab.jpg";
 
 const courses = [
-  { id: "web-dev", icon: Code, title: "Full-Stack Web Development", desc: "Master React, Node.js, databases, and deployment. Build production-ready apps from scratch.", duration: "12 Weeks", students: "2,400+", rating: "4.9", level: "Beginner to Advanced", price: "GH₵7,500", internship: true },
-  { id: "mobile-dev", icon: Smartphone, title: "Mobile App Development", desc: "Learn React Native and Flutter to build cross-platform mobile applications.", duration: "10 Weeks", students: "1,800+", rating: "4.8", level: "Intermediate", price: "GH₵6,750", internship: true },
-  { id: "cloud-eng", icon: Cloud, title: "Cloud Engineering & DevOps", desc: "AWS, Azure, Docker, Kubernetes, CI/CD pipelines, and infrastructure as code.", duration: "14 Weeks", students: "1,200+", rating: "4.9", level: "Intermediate to Advanced", price: "GH₵8,990", internship: true },
-  { id: "cybersecurity", icon: Shield, title: "Cybersecurity Fundamentals", desc: "Ethical hacking, penetration testing, network security, and compliance frameworks.", duration: "10 Weeks", students: "950+", rating: "4.7", level: "Beginner to Intermediate", price: "GH₵5,990", internship: false },
+  { id: "web-dev", icon: Code, title: "Full-Stack Web Development", desc: "Master React, Node.js, databases, and deployment. Build production-ready apps from scratch.", duration: "12 Weeks", students: "2,400+", rating: "4.5", level: "Beginner to Advanced", price: "GH₵ 500", internship: true },
+  { id: "mobile-dev", icon: Smartphone, title: "Mobile App Development", desc: "Learn React Native and Flutter to build cross-platform mobile applications.", duration: "10 Weeks", students: "1,800+", rating: "4.8", level: "Intermediate", price: "GH₵1,750", internship: true },
+  { id: "cloud-eng", icon: Cloud, title: "Cloud Engineering & DevOps", desc: "AWS, Azure, Docker, Kubernetes, CI/CD pipelines, and infrastructure as code.", duration: "14 Weeks", students: "1,200+", rating: "4.9", level: "Intermediate to Advanced", price: "GH₵3,990", internship: false },
+  { id: "cybersecurity", icon: Shield, title: "Cybersecurity Fundamentals", desc: "Ethical hacking, penetration testing, network security, and compliance frameworks.", duration: "10 Weeks", students: "950+", rating: "4.7", level: "Beginner to Intermediate", price: "GH₵1,990", internship: true },
   { id: "ai-ml", icon: Brain, title: "AI & Machine Learning", desc: "Python, TensorFlow, neural networks, NLP, and real-world AI project deployment.", duration: "16 Weeks", students: "1,600+", rating: "4.9", level: "Intermediate to Advanced", price: "GH₵9,750", internship: true },
   { id: "it-support", icon: Monitor, title: "IT Support & Administration", desc: "CompTIA A+ prep, networking, troubleshooting, and enterprise system administration.", duration: "8 Weeks", students: "3,100+", rating: "4.8", level: "Beginner", price: "GH₵4,490", internship: false },
+  { id: "Data-science-analytics", icon: CheckCircle, title: "Data Science Analytics", desc: "Kaggle, Google Colab, jupyter-lab, pytorch and azure ml.", duration: "8 Weeks", students: "50+", rating: "4.0", level: "Beginner", price: "Free", internship: true },
+  { id: "introduction-to-linux", icon: Heart, title: "Introduction to Linux Based Systems", desc: "VM workstation, VirtualBox, Dabian, and Ubuntu.", duration: "8 Weeks", students: "50+", rating: "4.0", level: "Beginner", price: "Free", internship: true },
+  { id: "introduction-to-python", icon: Flag, title: "Introduction to Python", desc: "Python, open-sourse.", duration: "10 Weeks", students: "50+", rating: "4.0", level: "Beginner", price: "Free", internship: true },
+  { id: "introduction-to-react-tsx-js", icon: Award, title: "Introduction to React, Typescript and Javascript", desc: "React, TypeScript and JavaScript.", duration: "10 Weeks", students: "50+", rating: "4.0", level: "Beginner", price: "Free", internship: true },
+  { id: "dbm & ms", icon: Code, title: "Database Management & Management Systems", desc: "Kaggle, Google Colab, jupyter-lab, and azure ml.", duration: "8 Weeks", students: "50+", rating: "4.0", level: "Beginner", price: "Free", internship: true },
+  { id: "excel", icon: FileSpreadsheet, title: "Introduction to Excel", desc: "Excel basics, data science, and programming.", duration: "8 Weeks", students: "50+", rating: "4.0", level: "Beginner", price: "Free", internship: true },
+  { id: "networking",  icon: Monitor,  title: "Networking & Systems Administration", desc: "Networking basics, networking tools, system admin, Troubleshooting,lab works.", duration: "10 Weeks", students: "40+", rating: "4.0", level: "Beginner",  price: "Free", internship: true },
+  { id: "prompting",  icon: Brain,  title: "Prompt Engineering", desc: "Prompting basics, ai tools, engineering, machine language.", duration: "12 Weeks", students: "20+", rating: "4.0", level: "Beginner",  price: "Free", internship: true },
+];
 ];
 
 const Courses = () => {
