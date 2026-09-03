@@ -5,7 +5,7 @@ import { ArrowLeft, Mail, Loader2, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { supabase } from "@/integrations/supabase/client";
-import darylLogo from "@/assets/daryl-tech-logo.png";
+import darylLogo from "@/assets/daryltech-auth-logo.jpg";
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
