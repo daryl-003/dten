@@ -37,7 +37,7 @@ const socials = [
   { icon: Facebook, href: "https://www.facebook.com/daryltecheducationalnetwork", label: "Facebook" },
   { icon: Linkedin, href: "https://www.linkedin.com/company/daryl-tech-educational-network", label: "LinkedIn" },
   { icon: Twitter, href: "https://x.com/daryl_tech", label: "X" },
-  { icon: MessageCircle, href: "https://wa.me/233509147164", label: "WhatsApp" },
+  { icon: MessageCircle, href: "https://wa.me/+233509147164", label: "WhatsApp" },
 ];
 
 const Footer = () => {
