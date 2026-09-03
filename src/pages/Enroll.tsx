@@ -41,23 +41,12 @@ const Enroll = () => {
   });
 
   const courses = [
-   "Full-Stack Web Development",
+    "Full-Stack Web Development",
     "Mobile App Development",
     "Cloud Engineering & DevOps",
     "Cybersecurity Fundamentals",
     "AI & Machine Learning",
-    "UI/UX Design & Product Management",
     "IT Support & Administration",
-    "Data Science & Analytics",
-    "Prompt Engineering",
-    "Introduction to Linux",
-    "Introduction to Python",
-    "Graphic Design with AI",
-    "Ethical Hacking Essentials",
-    "Introduction to React, TypeScript and JavaScript",
-    "Database & Management Systems",
-    "Introduction to Excel",
-    "Networking and Systems Administration"
   ];
 
   useEffect(() => {
@@ -250,17 +239,10 @@ const Enroll = () => {
           <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }}>
             <h2 className="mb-6 text-2xl font-bold">Enroll via Google Form</h2>
             <p className="mb-4 text-sm text-muted-foreground">Prefer using Google Forms? Complete your enrollment below.</p>
-            <a
-    href="https://docs.google.com/forms/d/e/1FAIpQLSd49u8voUFuJRFRCBAYo3aI25RTw80F_zHyGI_vuN0AVmlyGw/viewform"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-block px-6 py-3 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 transition"
-  >
-    Open Google Form
-  </a>
-  <p className="mt-3 text-xs text-muted-foreground">
-    Note: Enrollments via Google Form will be processed within 24 to 48 hours. You'll receive your enrollment ID via email.
-  </p>
+            <div className="overflow-hidden rounded-xl border border-border">
+              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdExample/viewform?embedded=true" width="100%" height="600" className="border-0 bg-background" title="Enrollment Google Form">Loading Google Form…</iframe>
+            </div>
+            <p className="mt-3 text-xs text-muted-foreground">Note: Enrollments via Google Form will be processed within 24 hours.</p>
           </motion.div>
         </div>
       </section>

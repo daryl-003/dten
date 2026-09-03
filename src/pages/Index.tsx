@@ -27,16 +27,16 @@ const expertise = [
 ];
 
 const stats = [
-  { value: "2+", label: "Projects Delivered" },
-  { value: "5K+", label: "Students Trained" },
-  { value: "5+", label: "Years Experience" },
-  { value: "89.0%", label: "Uptime Guaranteed" },
+  { value: "150+", label: "Projects Delivered" },
+  { value: "10K+", label: "Students Trained" },
+  { value: "12+", label: "Years Experience" },
+  { value: "99.9%", label: "Uptime SLA" },
 ];
 
 const testimonials = [
   { quote: "Daryl Tech transformed our infrastructure. Their team is responsive, knowledgeable and relentless about quality.", name: "Jeffery Stillman", role: "Operations Lead" },
   { quote: "Enrolling in the academy was one of the best career decisions I made. Hands-on, real-world, taught by professionals.", name: "Daria A.", role: "Software Engineer" },
-  { quote: "Their cybersecurity work is best-in-class. Proactive, structured, and built around real threat models.", name: "Danny Glover", role: "General Manager"},
+  { quote: "Their cybersecurity work is best-in-class. Proactive, structured, and built around real threat models.", name: "Danny Glover", role: "CISO" },
 ];
 
 const Index = () => {
@@ -86,7 +86,7 @@ const Index = () => {
             </p>
             <h1 className="text-5xl font-bold leading-[0.95] tracking-tight text-foreground md:text-7xl lg:text-[8rem]">
               Daryl Tech & Educational Network<br />
-              <span className="text-gradient">Technology</span> &amp; Education in Ghana and Beyond
+              <span className="text-gradient">Technology</span> &amp; Education in Ghana
             </h1>
             <p className="mt-8 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
               Comprehensive digital solutions tailored to optimise your business, blending cutting-edge engineering with world-class education for the next generation of African tech leaders.
@@ -235,14 +235,14 @@ const Index = () => {
               Launch your <span className="text-gradient">tech career</span> with real-world training.
             </h2>
             <p className="mb-8 max-w-lg text-muted-foreground leading-relaxed">
-              Industry-leading courses in web development, AI, cloud engineering and cybersecurity, taught by professionals shipping in production. Hands-on projects, certificates and internship pathways included.
+              Industry-leading courses in web development, AI, cloud engineering and cybersecurity — taught by professionals shipping in production. Hands-on projects, certificates and internship pathways included.
             </p>
             <div className="mb-10 grid grid-cols-2 gap-4 md:gap-6">
               {[
-                { num: "15+", label: "Certified Courses" },
-                { num: "5K+", label: "Students Enrolled" },
+                { num: "6+", label: "Certified Courses" },
+                { num: "10K+", label: "Students Enrolled" },
                 { num: "95%", label: "Completion Rate" },
-                { num: "4.3", label: "Avg. Rating" },
+                { num: "4.9", label: "Avg. Rating" },
               ].map((s) => (
                 <div key={s.label} className="rounded-xl border border-border bg-card p-5">
                   <div className="text-2xl font-bold text-gradient">{s.num}</div>
@@ -276,7 +276,7 @@ const Index = () => {
                 Together, we'll build the <span className="text-gradient">future</span>.
               </h2>
               <p className="mt-6 max-w-xl text-muted-foreground leading-relaxed">
-                We believe in the power of collaboration to drive innovation. Whether you're enhancing efficiency, streamlining processes or embracing new technologies, we partner with you end to end with a shared commitment to excellence.
+                We believe in the power of collaboration to drive innovation. Whether you're enhancing efficiency, streamlining processes or embracing new technologies — we partner with you end to end with a shared commitment to excellence.
               </p>
               <Link to="/contact" className="mt-8 inline-flex items-center gap-3 rounded-full bg-gradient-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground transition-transform hover:scale-[1.03]">
                 Contact Us <ArrowUpRight size={15} />

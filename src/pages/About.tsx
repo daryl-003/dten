@@ -68,15 +68,13 @@ const values = [
 ];
 
 const milestones = [
-  { year: "2024", event: "Daryl Tech & Educational Network founded in Accra, Ghana" },
-  { year: "2024", event: "First enterprise client —  contract" },
-  { year: "2024", event: "Expanded to 15 team members" },
-  { year: "2025", event: "Launched AI & Automation division, focused on youth and young women in technology" },
-  { year: "2025", event: "30th project delivered, opened head office, Accra" },
-  { year: "2026", event: "Launched an internship programme for young and passionate students" },
-  { year: "2026", event: "30+ team members, serving clients globally" },
-  { year: "2026", event: "Introduced Internship opportunities for tertiary students & tech enthusiasts" },
-  { year: "2026", event: "Introduced an awareness program on cybersecurity and AI"}
+  { year: "2013", event: "Daryl Tech & Educational Network founded in San Francisco" },
+  { year: "2015", event: "First enterprise client — $500K contract" },
+  { year: "2017", event: "Expanded to 15 team members" },
+  { year: "2019", event: "Launched AI & Automation division" },
+  { year: "2021", event: "50th project delivered, opened NYC office" },
+  { year: "2023", event: "Cloud-native transformation services launched" },
+  { year: "2025", event: "30+ team members, serving clients globally" },
 ];
 
 const About = () => {
@@ -99,10 +97,10 @@ const About = () => {
               </h1>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Founded in 2024, Daryl Tech & Educational Network began with a simple mission: make world-class technology accessible to businesses of all sizes.
+                  Founded in 2013, Daryl Tech & Educational Network began with a simple mission: make world-class technology accessible to businesses of all sizes.
                 </p>
                 <p>
-                  Today, we're a team of 15+ engineers, designers, and strategists delivering solutions across web, mobile, cloud, cybersecurity, and AI while empowering learners through our tech education programs.
+                  Today, we're a team of 30+ engineers, designers, and strategists delivering solutions across web, mobile, cloud, cybersecurity, and AI — while empowering learners through our tech education programs.
                 </p>
               </div>
             </motion.div>
@@ -225,11 +223,11 @@ const About = () => {
               <div className="relative">
                 <img
                   src={ceoDarrylImg}
-                  alt="Stephen-Darryl Osei Boateng Junior - CEO"
+                  alt="Darryl Thompson - CEO"
                   className="rounded-xl border border-border w-full object-cover h-[400px]"
                 />
                 <div className="absolute -bottom-4 -right-4 rounded-lg bg-gradient-primary px-5 py-3">
-                  <p className="text-xs font-mono font-bold text-primary-foreground">EST. 2024</p>
+                  <p className="text-xs font-mono font-bold text-primary-foreground">EST. 2013</p>
                 </div>
               </div>
             </motion.div>
@@ -241,24 +239,24 @@ const About = () => {
               className="lg:col-span-3"
             >
               <p className="mb-2 text-sm font-mono uppercase tracking-widest text-primary">Leadership</p>
-              <h2 className="mb-2 text-3xl font-bold md:text-4xl">Stephen-Darryl</h2>
-              <p className="mb-6 text-sm font-mono text-primary">Co-Founder & Chief Executive Officer</p>
+              <h2 className="mb-2 text-3xl font-bold md:text-4xl">Darryl Thompson</h2>
+              <p className="mb-6 text-sm font-mono text-primary">Founder & Chief Executive Officer</p>
               <p className="mb-6 text-muted-foreground leading-relaxed">
-                With over 5 years of experience in technology leadership, Darryl founded Daryl Tech & Educational Network with a vision to bridge the gap between cutting-edge technology and everyday business needs. His background includes engineering leadership roles at Fortune companies, where he led teams of 10+ engineers building mission-critical systems.
+                With over 15 years of experience in technology leadership, Darryl founded Daryl Tech & Educational Network with a vision to bridge the gap between cutting-edge technology and everyday business needs. His background includes engineering leadership roles at Fortune 500 companies, where he led teams of 50+ engineers building mission-critical systems.
               </p>
               <p className="mb-8 text-muted-foreground leading-relaxed">
-                Under his guidance, Daryls Tech has delivered 10+ projects, generating over $50M in client revenue. Darryl is also a keynote speaker at major tech conferences and an advisor to multiple startups.
+                Under his guidance, Daryl Tech has delivered 150+ projects, generating over $50M in client revenue. Darryl is also a keynote speaker at major tech conferences and an advisor to multiple startups.
               </p>
 
               <div className="grid gap-4 sm:grid-cols-2 mb-8">
-                <a href="mailto:darrylshub@gmail.com" className="flex items-center gap-3 rounded-lg border border-border bg-background px-4 py-3 text-sm text-muted-foreground hover:border-primary hover:text-primary transition-all">
-                  <Mail size={16} className="text-primary" /> darrylshub@gmail.com
+                <a href="mailto:darryl@daryltech.com" className="flex items-center gap-3 rounded-lg border border-border bg-background px-4 py-3 text-sm text-muted-foreground hover:border-primary hover:text-primary transition-all">
+                  <Mail size={16} className="text-primary" /> darryl@daryltech.com
                 </a>
-                <a href="tel:+233550007171" className="flex items-center gap-3 rounded-lg border border-border bg-background px-4 py-3 text-sm text-muted-foreground hover:border-primary hover:text-primary transition-all">
-                  <Phone size={16} className="text-primary" /> +233 (550) 007-171
+                <a href="tel:+1234567890" className="flex items-center gap-3 rounded-lg border border-border bg-background px-4 py-3 text-sm text-muted-foreground hover:border-primary hover:text-primary transition-all">
+                  <Phone size={16} className="text-primary" /> +1 (234) 567-890
                 </a>
-                <a href="https://darylstech.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 rounded-lg border border-border bg-background px-4 py-3 text-sm text-muted-foreground hover:border-primary hover:text-primary transition-all">
-                  <Globe size={16} className="text-primary" /> darylstech.com
+                <a href="https://daryltech.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 rounded-lg border border-border bg-background px-4 py-3 text-sm text-muted-foreground hover:border-primary hover:text-primary transition-all">
+                  <Globe size={16} className="text-primary" /> daryltech.com
                 </a>
                 <div className="flex gap-2">
                   {[
@@ -316,7 +314,7 @@ const About = () => {
               This platform brings together our consulting practice and our education network under one roof. Clients can commission projects, browse our portfolio, and book calls. Learners can enrol in certified courses, submit assignments, chat with our AI mentor Jael, and track progress in a personal dashboard.
             </p>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Built with modern, responsive engineering — realtime notifications, secure payments in Ghanaian Cedi or other currencies, and role-based dashboards for students, staff and administrators.
+              Built with modern, responsive engineering — realtime notifications, secure payments in Ghanaian Cedi, and role-based dashboards for students, staff and administrators.
             </p>
           </motion.div>
 
@@ -357,12 +355,12 @@ const About = () => {
         </motion.div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {[
-            { icon: Award, title: "Excellence as Standard", desc: "We treat production code and classroom material with the same craft. No shortcuts, No filler." },
+            { icon: Award, title: "Excellence as Standard", desc: "We treat production code and classroom material with the same craft — no shortcuts, no filler." },
             { icon: Users, title: "People Before Product", desc: "Clients are partners; students are colleagues in training. We invest in relationships, not transactions." },
             { icon: Globe, title: "Built in Africa, for the World", desc: "We are proudly Ghanaian and globally competitive. Our work reflects both roots and ambition." },
             { icon: Brain, title: "Learn Relentlessly", desc: "Technology moves fast. We upskill weekly, share what we learn, and hire the curious." },
             { icon: Shield, title: "Integrity & Transparency", desc: "Clear scopes, honest timelines, plain pricing. What we promise is what we ship." },
-            { icon: TrendingUp, title: "Impact Over Vanity", desc: "We measure success by careers changed and businesses moved forward, not likes or logos." },
+            { icon: TrendingUp, title: "Impact Over Vanity", desc: "We measure success by careers changed and businesses moved forward — not likes or logos." },
           ].map((v, i) => (
             <motion.div
               key={v.title}
