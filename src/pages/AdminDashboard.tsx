@@ -56,7 +56,7 @@ const sidebarGroups = [
 
 const COURSES = [
   "Full Stack Web Development", "Data Science & Analytics", "Cybersecurity Fundamentals", "Python", "Ethical Hacking and Essentials",
-  "Mobile App Development", "AI & Machine Learning", "Cloud Computing","Prompt Engineering", "Graphic Design with AI", "Linux"
+  "Mobile App Development", "AI & Machine Learning", "Cloud Computing","Prompt Engineering", "Graphic Design with AI", "Linux",
   "UI/UX Design", "Digital Marketing", "Database and Management Systems", "Networking", "IT Support" , "Typescript, React and Javascript",
 ];
 
