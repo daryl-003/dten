@@ -10,11 +10,16 @@ const timeSlots = ["9:00 AM", "10:00 AM", "11:00 AM", "1:00 PM", "2:00 PM", "3:0
 const serviceOptions = [
   "Web Development",
   "Mobile App Development",
+  "Internship Inquiry",
   "Cloud Solutions",
   "Cybersecurity",
-  "AI & Automation",
+  "Data Analysis",
+  "AI & Machine Learning",
   "IT Consulting",
+  "Vulnerability Assessment",
   "General Inquiry",
+  "Job Employment Inquiry",
+  "Partnership",
 ];
 
 const Booking = () => {
@@ -86,7 +91,7 @@ const Booking = () => {
               Thank you, <span className="text-foreground font-medium">{form.name}</span>. We've received your consultation request.
             </p>
             <p className="text-sm text-muted-foreground">
-              Our team will reach out to <span className="text-foreground">{form.email}</span> within 24 hours to confirm your appointment.
+              Our team will reach out to <span className="text-foreground">{form.email}</span> within 24 to 48 hours to confirm your appointment.
             </p>
           </motion.div>
         </section>
@@ -115,23 +120,25 @@ const Booking = () => {
                   <li className="flex items-start gap-2"><CheckCircle size={14} className="mt-0.5 text-primary shrink-0" /> Discovery call to understand your goals</li>
                   <li className="flex items-start gap-2"><CheckCircle size={14} className="mt-0.5 text-primary shrink-0" /> Technical feasibility assessment</li>
                   <li className="flex items-start gap-2"><CheckCircle size={14} className="mt-0.5 text-primary shrink-0" /> Timeline and cost estimation</li>
-                  <li className="flex items-start gap-2"><CheckCircle size={14} className="mt-0.5 text-primary shrink-0" /> No obligation — completely free</li>
+                  <li className="flex items-start gap-2"><CheckCircle size={14} className="mt-0.5 text-primary shrink-0" /> No obligation, completely free</li>
                 </ul>
               </div>
 
               {/* Google Form Embed */}
-              <div className="rounded-xl border border-border bg-card p-6">
-                <h2 className="mb-3 text-sm font-semibold">Or Book via Google Form</h2>
+                 <div className="rounded-xl border border-border bg-card p-6">
+                <h3 className="mb-3 text-sm font-semibold">Or Book via Google Form</h3>
                 <div className="overflow-hidden rounded-lg border border-border">
-                  <iframe
-                    src="https://docs.google.com/forms/d/e/1FAIpQLSdExample/viewform?embedded=true"
-                    width="100%"
-                    height="400"
-                    className="border-0 bg-background"
-                    title="Booking Google Form"
-                  >
-                    Loading Google Form…
-                  </iframe>
+                  <a
+    href="https://docs.google.com/forms/d/e/1FAIpQLSflhJFOORGufdT4fhFj9vsllffOAmWsKRPUATXJtFZcno5wqA/viewform?usp=publish-editor"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-block px-6 py-3 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 transition"
+  >
+    Open Google Form
+  </a>
+  <p className="mt-3 text-xs text-muted-foreground">
+    Note: Booking  via Google Form will be processed within 24 to 48 hours. You'll receive your enrollment ID via email.
+  </p>
                 </div>
                 <p className="mt-2 text-xs text-muted-foreground">Prefer Google Forms? Submit your booking request above.</p>
               </div>
@@ -145,16 +152,16 @@ const Booking = () => {
               )}
               <div>
                 <label className="mb-1.5 flex items-center gap-2 text-sm font-medium"><User size={14} className="text-primary" /> Full Name</label>
-                <input type="text" name="name" required value={form.name} onChange={handleChange} className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" placeholder="John Doe" />
+                <input type="text" name="name" required value={form.name} onChange={handleChange} className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" placeholder="DTEN" />
               </div>
               <div className="grid gap-5 md:grid-cols-2">
                 <div>
                   <label className="mb-1.5 flex items-center gap-2 text-sm font-medium"><Mail size={14} className="text-primary" /> Email</label>
-                  <input type="email" name="email" required value={form.email} onChange={handleChange} className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" placeholder="john@example.com" />
+                  <input type="email" name="email" required value={form.email} onChange={handleChange} className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" placeholder="dten@example.com" />
                 </div>
                 <div>
                   <label className="mb-1.5 flex items-center gap-2 text-sm font-medium"><Phone size={14} className="text-primary" /> Phone</label>
-                  <input type="tel" name="phone" value={form.phone} onChange={handleChange} className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" placeholder="+1 (234) 567-890" />
+                  <input type="tel" name="phone" value={form.phone} onChange={handleChange} className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" placeholder="+233 (234) 567-890" />
                 </div>
               </div>
               <div>
