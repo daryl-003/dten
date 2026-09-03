@@ -247,22 +247,21 @@ const Enroll = () => {
             </form>
           </motion.div>
 
-          <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }}>
+                   <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }}>
             <h2 className="mb-6 text-2xl font-bold">Enroll via Google Form</h2>
             <p className="mb-4 text-sm text-muted-foreground">Prefer using Google Forms? Complete your enrollment below.</p>
-            <a
-    href="https://docs.google.com/forms/d/e/1FAIpQLSd49u8voUFuJRFRCBAYo3aI25RTw80F_zHyGI_vuN0AVmlyGw/viewform"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-block px-6 py-3 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 transition"
-  >
-    Open Google Form
-  </a>
-  <p className="mt-3 text-xs text-muted-foreground">
-    Note: Enrollments via Google Form will be processed within 24 to 48 hours. You'll receive your enrollment ID via email.
-  </p>
+            
+              href="https://docs.google.com/forms/d/e/1FAIpQLSd49u8voUFuJRFRCBAYo3aI25RTw80F_zHyGI_vuN0AVmlyGw/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-3 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 transition"
+            >
+              Open Google Form
+            </a>
+            <p className="mt-3 text-xs text-muted-foreground">
+              Note: Enrollments via Google Form will be processed within 24 to 48 hours. You'll receive your enrollment ID via email.
+            </p>
           </motion.div>
-    
         </div>
       </section>
     </Layout>
