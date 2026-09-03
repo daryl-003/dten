@@ -27,7 +27,6 @@ const courses = [
   { id: "networking",  icon: Monitor,  title: "Networking & Systems Administration", desc: "Networking basics, networking tools, system admin, Troubleshooting,lab works.", duration: "10 Weeks", students: "40+", rating: "4.0", level: "Beginner",  price: "Free", internship: true },
   { id: "prompting",  icon: Brain,  title: "Prompt Engineering", desc: "Prompting basics, ai tools, engineering, machine language.", duration: "12 Weeks", students: "20+", rating: "4.0", level: "Beginner",  price: "Free", internship: true },
 ];
-];
 
 const Courses = () => {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null);
