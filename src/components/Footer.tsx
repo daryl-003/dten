@@ -48,7 +48,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <Link to="/" aria-label="Daryl Tech — Home" className="inline-flex items-center gap-3">
-              <img src={logoAsset.url} alt="Daryl Tech" className="h-10 w-auto object-contain" />
+              <img src={logo} alt="Daryl Tech" className="h-10 w-auto object-contain" />
             </Link>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted-foreground">
               Building the future of tech through world-class engineering and next-generation education across Africa.
