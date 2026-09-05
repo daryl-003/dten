@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Facebook, Instagram, Linkedin, Twitter, MessageCircle, Mail, Phone, MapPin, ArrowUpRight } from "lucide-react";
-import logoAsset from "@/assets/daryl-tech-logo.png.asset.json";
+import logo from "@/assets/daryl-tech-logo.png";
 
 const columns = [
   {
