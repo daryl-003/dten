@@ -7,8 +7,7 @@ import {
 import { motion, AnimatePresence } from "framer-motion";
 import { supabase } from "@/integrations/supabase/client";
 import { getSessionOnce } from "@/lib/session";
-import logoAsset from "@/assets/daryl-tech-logo.png.asset.json";
-const logo = logoAsset.url;
+import logo from "@/assets/daryl-tech-logo.png";
 
 const navItems = [
   { label: "Home", path: "/" },
