@@ -3,7 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Loader2, ShieldCheck } from "lucide-react";
-import darylLogo from "@/assets/daryl-tech-logo.png.asset.json";
+import darylLogo from "@/assets/daryl-tech-logo.png";
 
 type OAuthClient = { name?: string; client_name?: string; redirect_uri?: string };
 type AuthorizationDetails = {
@@ -107,7 +107,7 @@ const OAuthConsent = () => {
   return (
     <main className="flex min-h-screen items-center justify-center bg-background px-6 py-16">
       <div className="w-full max-w-md rounded-2xl border border-border/60 bg-card/60 p-8 backdrop-blur">
-        <img src={darylLogo.url} alt="Daryl Tech Educational Network" className="mb-6 h-10 w-auto object-contain" />
+        <img src={darylLogo} alt="Daryl Tech Educational Network" className="mb-6 h-10 w-auto object-contain" />
 
         {loading ? (
           <div className="flex items-center gap-3 text-muted-foreground">
