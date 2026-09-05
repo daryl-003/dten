@@ -86,7 +86,7 @@ const Index = () => {
             </p>
             <h1 className="text-5xl font-bold leading-[0.95] tracking-tight text-foreground md:text-7xl lg:text-[8rem]">
               Building the<br />
-              <span className="text-gradient">Future</span> &amp; Tech
+              <span className="text-gradient">Future</span> with Tech
             </h1>
             <p className="mt-8 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">
               Comprehensive digital solutions tailored to optimise your business, blending cutting-edge engineering with world-class education for the next generation of African tech leaders.
