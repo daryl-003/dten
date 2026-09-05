@@ -61,7 +61,7 @@ const Index = () => {
         { "@context": "https://schema.org", "@type": "WebSite", name: "Daryl Tech & Educational Network", url: "https://darryls-digital-spark.lovable.app/" },
       ]} />
       {/* HERO — cinematic, full-bleed */}
-      <section className="relative h-screen min-h-[640px] w-full overflow-hidden">
+      <section className="relative min-h-screen w-full overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={heroDC}
