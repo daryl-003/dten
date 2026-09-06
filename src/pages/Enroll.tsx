@@ -219,7 +219,7 @@ const Enroll = () => {
               </div>
               <div>
                 <label className="mb-1.5 block text-sm font-medium text-foreground">Phone</label>
-                <input required type="tel" maxLength={20} value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} className="flex h-11 w-full rounded-lg border border-border bg-background px-4 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" placeholder="+1 (234) 567-890" />
+                <input required type="tel" maxLength={20} value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} className="flex h-11 w-full rounded-lg border border-border bg-background px-4 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" placeholder="+233 (234) 567-890" />
               </div>
               <div>
                 <label className="mb-1.5 block text-sm font-medium text-foreground">Select Course</label>
