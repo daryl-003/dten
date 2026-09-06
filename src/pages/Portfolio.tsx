@@ -113,7 +113,7 @@ const ProjectCard = ({ project, index }: { project: typeof companyProjects[0]; i
 const Portfolio = () => {
   return (
     <Layout>
-      <Seo title={"Portfolio — Selected Work | Daryl Tech"} description={"Case studies and shipped products from the Daryl Tech engineering team across web, mobile, cloud and AI projects."} path="/portfolio" />
+      <Seo title={"Portfolio | Selected Work of Daryl Tech"} description={"Case studies and shipped products from the Daryl Tech engineering team across web, mobile, cloud and AI projects."} path="/portfolio" />
       {/* Hero with background image */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
