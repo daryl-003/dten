@@ -8,7 +8,7 @@ import heroImg from "@/assets/hero-datacenter.jpg";
 import sectionImg from "@/assets/section-network.jpg";
 
 const services = [
-  { icon: Code, title: "Web Development", desc: "Full-stack platforms in React, Node.js, and modern frameworks — from landing pages to enterprise systems.", tag: "01" },
+  { icon: Code, title: "Web Development", desc: "Full-stack platforms in React, Node.js, and modern frameworks from landing pages to enterprise systems.", tag: "01" },
   { icon: Smartphone, title: "Mobile Applications", desc: "iOS and Android apps built with React Native and Flutter. Seamless cross-platform experiences.", tag: "02" },
   { icon: Cloud, title: "Cloud Solutions", desc: "AWS, Azure, and GCP setup, migration, and optimization for scalable cloud architectures.", tag: "03" },
   { icon: Shield, title: "Cybersecurity", desc: "Penetration testing, compliance auditing, and hardened security for your digital assets.", tag: "04" },
@@ -21,16 +21,16 @@ const services = [
 const industries = ["Finance", "Healthcare", "Education", "Logistics", "Retail", "Public Sector", "Startups", "Manufacturing"];
 
 const testimonials = [
-  { name: "Sarah Mitchell", role: "CEO, Nexus Retail", text: "Daryl Tech transformed our entire e-commerce platform. Revenue increased 40% within three months of launch.", rating: 5 },
-  { name: "James Rodriguez", role: "CTO, FinEdge Capital", text: "Their cybersecurity audit uncovered critical vulnerabilities we hadn't seen. Professional, thorough, and fast.", rating: 5 },
-  { name: "Amara Johnson", role: "Founder, GreenPath Logistics", text: "The custom logistics dashboard they built saves our team 20 hours per week. Incredible ROI.", rating: 5 },
-  { name: "David Chen", role: "VP Engineering, Pulse Health", text: "Moving to the cloud with Daryl Tech was seamless. Zero downtime migration — exactly what we needed.", rating: 5 },
+  { name: "Sarah McDavies", role: "CEO, Nexus Retail", text: "Daryl Tech transformed our entire e-commerce platform. Revenue increased 40% within three months of launch.", rating: 5 },
+  { name: "Edmund Yeboah", role: "CTO, NutriGhana", text: "Their cybersecurity audit uncovered critical vulnerabilities we hadn't seen. Professional, thorough, and fast.", rating: 5 },
+  { name: "Asare Stephen", role: "Founder, Penel Group", text: "The custom logistics dashboard they built saves our team 20 hours per week. Incredible ROI.", rating: 5 },
+  { name: "David Adu Morris", role: "VP Engineering, Pulse Health", text: "Moving to the cloud with Daryl Tech was seamless. Zero downtime migration — exactly what we needed.", rating: 5 },
 ];
 
 const Services = () => {
   return (
     <Layout>
-      <Seo title={"IT Services — Web, Mobile, Cloud & AI | Daryl Tech"} description={"Eight delivery disciplines: web and mobile apps, cloud, cybersecurity, data and AI, design and consulting for growing teams."} path="/services" />
+      <Seo title={"IT Services | Web, Mobile, Cloud & AI | Daryl Tech"} description={"Eight delivery disciplines: web and mobile apps, cloud, cybersecurity, data and AI, design and consulting for growing teams."} path="/services" />
       {/* Cinematic Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
@@ -115,7 +115,7 @@ const Services = () => {
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
               <p className="mb-2 text-sm font-mono uppercase tracking-widest text-primary">How we work</p>
-              <h2 className="mb-6 text-3xl font-bold md:text-4xl">A disciplined process — from brief to launch.</h2>
+              <h2 className="mb-6 text-3xl font-bold md:text-4xl">A disciplined process from brief to launch.</h2>
               <div className="space-y-6">
                 {[
                   { n: "01", t: "Discovery", d: "We map the problem, users, and success metrics before writing a line of code." },
