@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Briefcase, Building2, GraduationCap, Users, CheckCircle2, LogIn, Award, Handshake, Sparkles, Loader2, Send, Code, Smartphone, ShieldCheck, BrainCircuit, BarChart3, Terminal, Database, Palette, Wand2, Lock } from "lucide-react";
+import { ArrowRight, Briefcase, Building2, GraduationCap, Users, CheckCircle2, LogIn, Award, Handshake, Sparkles, Loader2, Send, Code, Smartphone, ShieldCheck, BrainCircuit, BarChart3, Terminal, Database, Palette, Wand2, Lock, FileSpreadsheet } from "lucide-react";
 import Layout from "@/components/Layout";
 import Seo from "@/components/Seo";
 import AnimatedSplash from "@/components/AnimatedSplash";
@@ -23,16 +23,15 @@ const applicationSchema = z.object({
 });
 
 const tracks = [
-  { icon: Briefcase, title: "Software Engineering", duration: "3–6 months", slots: "12 slots / cohort", desc: "Ship production features in a real team. React, Node, Postgres, CI/CD." },
-  { icon: Sparkles, title: "AI & Data", duration: "3 months", slots: "8 slots / cohort", desc: "Build LLM-powered tools, dashboards and data pipelines with mentors." },
-  { icon: Building2, title: "Cloud & DevOps", duration: "4 months", slots: "6 slots / cohort", desc: "AWS/Azure, Docker, Kubernetes and infrastructure automation on live workloads." },
-  { icon: Award, title: "Cybersecurity", duration: "3 months", slots: "6 slots / cohort", desc: "Blue-team ops, pen-testing labs and compliance auditing under senior guidance." },
+  { icon: Award, title: "Cybersecurity Fundamentals", duration: "3 months", slots: "6 slots / cohort", desc: "Blue-team ops, pen-testing labs and compliance auditing under senior guidance." },
   { icon: Code, title: "Full Stack Web Development", duration: "4–6 months", slots: "12 slots / cohort", desc: "Build end-to-end web apps with modern frontend, backend and database tech." },
   { icon: Smartphone, title: "Mobile App Development", duration: "4 months", slots: "10 slots / cohort", desc: "Design and ship native and cross-platform apps for iOS and Android." },
+  { icon: Terminal, title: "Introduction to Linux", duration: "6 weeks", slots: "15 slots / cohort", desc: "Command line basics, file systems and shell scripting fundamentals." },
   { icon: ShieldCheck, title: "Cybersecurity Fundamentals", duration: "3 months", slots: "8 slots / cohort", desc: "Core security principles, threat modeling and hands-on defense labs." },
   { icon: BrainCircuit, title: "AI & Machine Learning", duration: "3–5 months", slots: "8 slots / cohort", desc: "Train and deploy ML models, from fundamentals to real-world applications." },
   { icon: BarChart3, title: "Data Science & Analytics", duration: "4 months", slots: "10 slots / cohort", desc: "Analyze data, build models and communicate insights with real datasets." },
   { icon: Terminal, title: "Introduction to Python", duration: "6 weeks", slots: "15 slots / cohort", desc: "Learn programming fundamentals and problem-solving using Python." },
+  { icon: FileSpreadsheet, title: "Excel Fundamentals", duration: "4 weeks", slots: "15 slots / cohort", desc: "Master formulas, pivot tables and data analysis for everyday business use." },
   { icon: Database, title: "Database Management & Management Systems", duration: "3 months", slots: "10 slots / cohort", desc: "Design, query and administer relational and NoSQL database systems." },
   { icon: Sparkles, title: "Prompt Engineering", duration: "4 weeks", slots: "15 slots / cohort", desc: "Craft effective prompts and workflows to get the most out of LLMs." },
   { icon: Palette, title: "UI/UX Design", duration: "3 months", slots: "12 slots / cohort", desc: "Research, wireframe and prototype user-centered digital experiences." },
