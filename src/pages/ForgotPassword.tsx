@@ -31,7 +31,13 @@ const ForgotPassword = () => {
   };
 
   return (
-    <div className="flex min-h-screen">
+     <div className="relative flex min-h-screen">
+      <Link
+        to="/"
+        className="absolute left-5 top-5 z-20 inline-flex items-center gap-1.5 rounded-full border border-border bg-background/80 px-3 py-1.5 text-xs text-muted-foreground backdrop-blur transition-colors hover:text-primary"
+      >
+        <ArrowLeft size={13} /> Back to website
+      </Link>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
