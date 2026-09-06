@@ -26,7 +26,7 @@ const courses = [
   { id: "excel", icon: FileSpreadsheet, title: "Introduction to Excel", desc: "Excel basics, data science, and programming.", duration: "8 Weeks", students: "50+", rating: "4.0", level: "Beginner to Advance", price: "Free", internship: true },
   { id: "networking",  icon: Monitor,  title: "Networking & Systems Administration", desc: "Networking basics, networking tools, system admin, Troubleshooting,lab works.", duration: "10 Weeks", students: "50+", rating: "4.0", level: "Beginner to Advance",  price: "Free", internship: true },
   { id: "prompting",  icon: Brain,  title: "Prompt Engineering", desc: "Prompting basics, ai tools, engineering, machine language.", duration: "12 Weeks", students: "50+", rating: "4.0", level: "Beginner to Advance",  price: "Free", internship: true },
-  { id: "ethical-hacking", icon: Lock, title: "Ethical Hacking Essentials", desc: "Pen-testing techniques, vulnerability assessment, network security.", duration: "14 Weeks", students: "50+", rating: "4.2", level: "Beginner to Advance", price: "Free", internship: true },
+  
 ];
 
 const Courses = () => {
