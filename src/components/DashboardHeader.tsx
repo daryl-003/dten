@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Search, BellRing, Check } from "lucide-react";
+import { Link } from "react-router-dom";
+iimport { Search, BellRing, Check, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -49,6 +50,12 @@ export default function DashboardHeader({
       {/* Top bar */}
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div className="min-w-0 pl-12 lg:pl-0">
+          <Link
+            to="/"
+            className="mb-1.5 inline-flex items-center gap-1.5 text-xs text-muted-foreground transition-colors hover:text-primary"
+          >
+            <ArrowLeft size={13} /> Back to website
+          </Link>
           <h1 className="text-lg font-bold tracking-tight text-foreground sm:text-2xl lg:text-[28px]">
             {title}
           </h1>
