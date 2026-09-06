@@ -14,7 +14,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { invokeFn } from "@/lib/functions";
 import { useToast } from "@/hooks/use-toast";
 
-export const COURSE_ICONS = ["Code", "Smartphone", "Cloud", "Shield", "Brain", "Monitor", "BookOpen"];
+export const COURSE_ICONS = ["ArrowRight", "Clock", "Code", "Users", "Star",  "Smartphone", "Cloud", "Shield", "Brain", "Monitor", "LogIn", "Briefcase", "CreditCard", "Loader2", "Award", "CheckCircle", "Heart", "FileSpreadsheet", "Flag", "Lock", "LucideIcon", "BookOpen"];
 
 type Course = {
   id: string;
