@@ -125,10 +125,10 @@ const Portfolio = () => {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-2xl">
             <p className="mb-2 text-sm font-mono uppercase tracking-widest text-primary">Portfolio</p>
             <h1 className="mb-4 text-4xl font-bold md:text-6xl">
-              Daryl Tech Portfolio — <span className="text-gradient">Selected Tech and Education Projects</span>
+              Daryl Tech Portfolio. <span className="text-gradient">Selected Tech and Education Projects</span>
             </h1>
             <p className="text-lg text-muted-foreground">
-              Explore a curated selection of projects — from CEO-led flagships to team-driven innovations across every industry.
+              Explore a curated selection of projects from CEO-led flagships to team-driven innovations across every industry.
             </p>
           </motion.div>
         </div>
@@ -158,25 +158,25 @@ const Portfolio = () => {
               <div className="rounded-xl border border-border bg-background p-8 text-center hover-glow">
                 <img
                   src={ceoImg}
-                  alt="Darryl Thompson"
+                  alt="Stephen Boateng"
                   className="mx-auto mb-6 h-36 w-36 rounded-full object-cover border-4 border-primary/30"
                 />
-                <h3 className="text-2xl font-bold">Darryl Thompson</h3>
+                <h3 className="text-2xl font-bold">Stephen Boateng</h3>
                 <p className="mb-1 text-sm font-mono text-primary">Founder & CEO</p>
                 <p className="mb-6 text-sm text-muted-foreground leading-relaxed">
-                  15+ years in tech leadership. Former engineering lead at a Fortune 500 company. Passionate about making enterprise-grade technology accessible to every business.
+                  5+ years in tech leadership. Former engineering lead at a Fortune 50+ company. Passionate about making enterprise-grade technology accessible to every business.
                 </p>
 
                 {/* Contact Info */}
                 <div className="mb-6 space-y-3 text-left">
-                  <a href="mailto:darryl@daryltech.com" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
-                    <Mail size={15} className="text-primary" /> darryl@daryltech.com
+                  <a href="mailto:darrylshub@gmail.com" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
+                    <Mail size={15} className="text-primary" /> darrylshub@gmail.com
                   </a>
-                  <a href="tel:+1234567890" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
-                    <Phone size={15} className="text-primary" /> +1 (234) 567-890
+                  <a href="tel:+233550007171" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
+                    <Phone size={15} className="text-primary" /> +233 (550) 007-171
                   </a>
-                  <a href="https://daryltech.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
-                    <Globe size={15} className="text-primary" /> daryltech.com
+                  <a href="https://darylstech.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
+                    <Globe size={15} className="text-primary" /> darylstech.com
                   </a>
                 </div>
 
@@ -184,7 +184,7 @@ const Portfolio = () => {
                 <div className="flex justify-center gap-3">
                   {[
                     { icon: Linkedin, href: "https://www.linkedin.com/company/daryl-tech-educational-network", label: "LinkedIn" },
-                    { icon: Twitter, href: "https://x.com/daryl_tech?s=21", label: "Twitter" },
+                    { icon: Twitter, href: "https://x.com/darylszn?s=21", label: "Twitter" },
                     { icon: Github, href: "https://github.com/daryl-tech003", label: "GitHub" },
                   ].map((s) => (
                     <a
