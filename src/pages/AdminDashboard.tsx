@@ -9,6 +9,7 @@ import {
   Users, Shield, Trash2, Star, Sparkles, Power, PowerOff, Pencil, KeyRound, Copy
 } from "lucide-react";
 import AdminCourseCMS from "@/components/admin/AdminCourseCMS";
+import AdminCoursesManager from "@/components/admin/AdminCoursesManager";
 import DashboardSidebar from "@/components/DashboardSidebar";
 import DashboardHeader from "@/components/DashboardHeader";
 import ActivityFeed from "@/components/dashboard/ActivityFeed";
@@ -634,6 +635,7 @@ const AdminDashboard = () => {
             <TabsTrigger value="bookings"><Calendar size={14} className="mr-1" /> Bookings</TabsTrigger>
             <TabsTrigger value="certificates"><Award size={14} className="mr-1" /> Certificates</TabsTrigger>
             <TabsTrigger value="offers"><FileText size={14} className="mr-1" /> Offers</TabsTrigger>
+            <TabsTrigger value="courses"><GraduationCap size={14} className="mr-1" /> Courses</TabsTrigger>
             <TabsTrigger value="cms"><BookOpen size={14} className="mr-1" /> Course CMS</TabsTrigger>
             <TabsTrigger value="jael"><Sparkles size={14} className="mr-1" /> Jael AI</TabsTrigger>
           </TabsList>
@@ -1148,6 +1150,9 @@ const AdminDashboard = () => {
           </TabsContent>
 
           {/* Course Content Management */}
+          <TabsContent value="courses" className="space-y-4">
+            <AdminCoursesManager />
+          </TabsContent>
           <TabsContent value="cms" className="space-y-4">
             <AdminCourseCMS />
           </TabsContent>
