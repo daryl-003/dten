@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Briefcase, Building2, GraduationCap, Users, CheckCircle2, LogIn, Award, Handshake, Sparkles, Loader2, Send } from "lucide-react";
+import { ArrowRight, Briefcase, Building2, GraduationCap, Users, CheckCircle2, LogIn, Award, Handshake, Sparkles, Loader2, Send, Code, Smartphone, ShieldCheck, BrainCircuit, BarChart3, Terminal, Database, Palette, Wand2, Lock } from "lucide-react";
 import Layout from "@/components/Layout";
 import Seo from "@/components/Seo";
 import AnimatedSplash from "@/components/AnimatedSplash";
@@ -27,6 +27,17 @@ const tracks = [
   { icon: Sparkles, title: "AI & Data", duration: "3 months", slots: "8 slots / cohort", desc: "Build LLM-powered tools, dashboards and data pipelines with mentors." },
   { icon: Building2, title: "Cloud & DevOps", duration: "4 months", slots: "6 slots / cohort", desc: "AWS/Azure, Docker, Kubernetes and infrastructure automation on live workloads." },
   { icon: Award, title: "Cybersecurity", duration: "3 months", slots: "6 slots / cohort", desc: "Blue-team ops, pen-testing labs and compliance auditing under senior guidance." },
+  { icon: Code, title: "Full Stack Web Development", duration: "4–6 months", slots: "12 slots / cohort", desc: "Build end-to-end web apps with modern frontend, backend and database tech." },
+  { icon: Smartphone, title: "Mobile App Development", duration: "4 months", slots: "10 slots / cohort", desc: "Design and ship native and cross-platform apps for iOS and Android." },
+  { icon: ShieldCheck, title: "Cybersecurity Fundamentals", duration: "3 months", slots: "8 slots / cohort", desc: "Core security principles, threat modeling and hands-on defense labs." },
+  { icon: BrainCircuit, title: "AI & Machine Learning", duration: "3–5 months", slots: "8 slots / cohort", desc: "Train and deploy ML models, from fundamentals to real-world applications." },
+  { icon: BarChart3, title: "Data Science & Analytics", duration: "4 months", slots: "10 slots / cohort", desc: "Analyze data, build models and communicate insights with real datasets." },
+  { icon: Terminal, title: "Introduction to Python", duration: "6 weeks", slots: "15 slots / cohort", desc: "Learn programming fundamentals and problem-solving using Python." },
+  { icon: Database, title: "Database Management & Management Systems", duration: "3 months", slots: "10 slots / cohort", desc: "Design, query and administer relational and NoSQL database systems." },
+  { icon: Sparkles, title: "Prompt Engineering", duration: "4 weeks", slots: "15 slots / cohort", desc: "Craft effective prompts and workflows to get the most out of LLMs." },
+  { icon: Palette, title: "UI/UX Design", duration: "3 months", slots: "12 slots / cohort", desc: "Research, wireframe and prototype user-centered digital experiences." },
+  { icon: Wand2, title: "Graphic Design with AI", duration: "6 weeks", slots: "12 slots / cohort", desc: "Create visual content and branding assets using AI-powered design tools." },
+  { icon: Lock, title: "Ethical Hacking Essentials", duration: "3 months", slots: "6 slots / cohort", desc: "Pen-testing techniques and vulnerability assessment in controlled labs." },
 ];
 
 const benefits = [
@@ -96,7 +107,7 @@ const Internships = () => {
 
   return (
     <Layout>
-      <Seo title={"Tech Internships & Placements | Daryl Tech"} description={"Apply for hands-on internships with the Daryl Tech engineering team and build real products alongside mentors."} path="/internships" />
+      <Seo title={"Tech Internships & Placements | Daryl Tech"} description={"Apply for hands-on internships with the Daryl Tech engineering team and build real products alongside mentors with real-time experience."} path="/internships" />
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-border">
         <div className="absolute inset-0">
@@ -113,7 +124,7 @@ const Internships = () => {
               Launch your career with a <span className="text-gradient">real internship</span>.
             </h1>
             <p className="mb-8 max-w-xl text-lg text-muted-foreground leading-relaxed">
-              Structured programs across engineering, AI, cloud and security — with paid stipends, mentorship, and a clear path to full-time employment.
+              Structured programs across engineering, AI, cloud and security  with paid stipends, mentorship, and a clear path to full-time employment.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link to="#apply" className="inline-flex items-center gap-2 rounded-lg bg-gradient-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground transition-transform hover:scale-105">
@@ -155,7 +166,7 @@ const Internships = () => {
           <div className="grid gap-12 lg:grid-cols-2 items-center">
             <div>
               <p className="mb-2 text-sm font-mono uppercase tracking-widest text-primary">Why intern with us</p>
-              <h2 className="mb-6 text-3xl font-bold md:text-4xl">More than an internship — a <span className="text-gradient">career springboard</span>.</h2>
+              <h2 className="mb-6 text-3xl font-bold md:text-4xl">More than an internship, a <span className="text-gradient">career springboard</span>.</h2>
               <ul className="space-y-4">
                 {benefits.map((b) => (
                   <li key={b.title} className="flex items-start gap-3">
