@@ -106,7 +106,7 @@ const Internships = () => {
 
   return (
     <Layout>
-      <Seo title={"Tech Internships & Placements | Daryl Tech"} description={"Apply for hands-on internships with the Daryl Tech engineering team and build real products alongside mentors with real-time experience."} path="/internships" />
+      <Seo title={"Tech Internships & Placements "} description={"Apply for hands-on internships with the Daryl Tech engineering team and build real products alongside mentors with real-time experience."} path="/internships" />
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-border">
         <div className="absolute inset-0">
