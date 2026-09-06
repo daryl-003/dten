@@ -32,6 +32,7 @@ const courses = [
 const Courses = () => {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null);
   const [checkingOut, setCheckingOut] = useState<string | null>(null);
+  const [courses, setCourses] = useState<CourseCard[]>(FALLBACK_COURSES);
   const { toast } = useToast();
 
   useEffect(() => {
@@ -43,6 +44,32 @@ const Courses = () => {
     });
     return () => subscription.unsubscribe();
   }, []);
+
+  useEffect(() => {
+    supabase
+      .from("courses")
+      .select("*")
+      .eq("published", true)
+      .order("position")
+      .then(({ data }) => {
+        if (!data?.length) return;
+        setCourses(
+          data.map((c: any) => ({
+            id: c.slug,
+            icon: ICON_MAP[c.icon] || BookOpen,
+            title: c.title,
+            desc: c.description,
+            duration: c.duration,
+            students: c.students_label,
+            rating: c.rating,
+            level: c.level,
+            price: `GH₵${Number(c.price_ghs).toLocaleString()}`,
+            internship: c.internship,
+          })),
+        );
+      });
+  }, []);
+  
 
   const handleCheckout = async (courseId: string) => {
     setCheckingOut(courseId);
