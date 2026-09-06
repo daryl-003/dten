@@ -57,7 +57,7 @@ const Blog = () => {
 
   return (
     <Layout>
-      <Seo title={"Journal — Ideas, Essays & Field Notes | Daryl Tech"} description={"Long-form writing on technology, product and the practice of building software in Africa and beyond."} path="/blog" />
+      <Seo title={"Journal, Ideas, Essays & Field Notes | Daryl Tech"} description={"Long-form writing on technology, product and the practice of building software in Africa and beyond."} path="/blog" />
       {/* Cinematic Hero */}
       <section className="relative overflow-hidden border-b border-border">
         <AnimatedSplash intensity="medium" />
