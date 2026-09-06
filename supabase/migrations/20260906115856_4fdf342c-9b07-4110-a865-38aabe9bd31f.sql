@@ -1,0 +1,2 @@
+ALTER TABLE public.certificates DROP CONSTRAINT IF EXISTS certificates_type_check;
+ALTER TABLE public.certificates ADD CONSTRAINT certificates_type_check CHECK (type = ANY (ARRAY['certificate'::text,'recommendation'::text,'Certificate of Completion'::text,'Letter of Recommendation'::text,'Certificate of Excellence'::text]));
