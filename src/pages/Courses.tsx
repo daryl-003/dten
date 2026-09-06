@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowRight, Clock, Users, Star, BookOpen, Code, Cloud, Shield, Brain, Smartphone, Monitor, LogIn, Briefcase, CreditCard, Loader2, Award, CheckCircle, Heart, FileSpreadsheet, Flag, Lock} from "lucide-react";
+import { ArrowRight, Clock, Users, Star, BookOpen, Code, Cloud,Shield,Brain, Smartphone, Monitor, LogIn, Briefcase, CreditCard, Loader2, Award, CheckCircle, Heart, FileSpreadsheet, Flag, Lock, LucideIcon,} from "lucide-react";
 import Layout from "@/components/Layout";
 import Seo from "@/components/Seo";
 import AnimatedSplash from "@/components/AnimatedSplash";
@@ -11,21 +11,54 @@ import { getSessionOnce } from "@/lib/session";
 import { useToast } from "@/hooks/use-toast";
 import ghanaStudentsImg from "@/assets/ghana-students-lab.jpg";
 
-const courses = [
+// ---- Types ----
+interface CourseCard {
+  id: string;
+  icon: LucideIcon;
+  title: string;
+  desc: string;
+  duration: string;
+  students: string;
+  rating: string;
+  level: string;
+  price: string;
+  internship: boolean;
+}
+
+// ---- Icon lookup for courses coming from Supabase ----
+// Match these keys to whatever string you store in the `icon` column of your `courses` table.
+const ICON_MAP: Record<string, LucideIcon> = {
+  code: Code,
+  cloud: Cloud,
+  shield: Shield,
+  brain: Brain,
+  smartphone: Smartphone,
+  monitor: Monitor,
+  award: Award,
+  checkcircle: CheckCircle,
+  heart: Heart,
+  filespreadsheet: FileSpreadsheet,
+  flag: Flag,
+  lock: Lock,
+  bookopen: BookOpen,
+};
+
+// ---- Hardcoded fallback courses (used until/unless Supabase returns data) ----
+const FALLBACK_COURSES: CourseCard[] = [
   { id: "web-dev", icon: Code, title: "Full-Stack Web Development", desc: "Master React, Node.js, databases, and deployment. Build production-ready apps from scratch.", duration: "12 Weeks", students: "50", rating: "4.5", level: "Beginner to Advanced", price: "GH₵ 1,500", internship: true },
   { id: "mobile-dev", icon: Smartphone, title: "Mobile App Development", desc: "Learn React Native and Flutter to build cross-platform mobile applications.", duration: "10 Weeks", students: "50+", rating: "4.4", level: "Intermediate", price: "GH₵1,750", internship: true },
   { id: "cloud-eng", icon: Cloud, title: "Cloud Engineering & DevOps", desc: "AWS, Azure, Docker, Kubernetes, CI/CD pipelines, and infrastructure as code.", duration: "14 Weeks", students: "50+", rating: "4.0", level: "Intermediate to Advanced", price: "GH₵3,990", internship: false },
   { id: "cybersecurity", icon: Shield, title: "Cybersecurity Fundamentals", desc: "Ethical hacking, penetration testing, network security, and compliance frameworks.", duration: "10 Weeks", students: "50+", rating: "4.7", level: "Beginner to Intermediate", price: "GH₵1,990", internship: true },
   { id: "ai-ml", icon: Brain, title: "AI & Machine Learning", desc: "Python, TensorFlow, neural networks, NLP, and real-world AI project deployment.", duration: "16 Weeks", students: "50+", rating: "4.3", level: "Intermediate to Advanced", price: "GH₵1,750", internship: true },
   { id: "it-support", icon: Monitor, title: "IT Support & Administration", desc: "CompTIA A+ prep, networking, troubleshooting, and enterprise system administration.", duration: "8 Weeks", students: "50+", rating: "4.8", level: "Beginner to Advance", price: "GH₵1,490", internship: false },
-  { id: "Data-science-analytics", icon: CheckCircle, title: "Data Science & Analytics", desc: "Kaggle, Google Colab, jupyter-lab, pytorch and azure ml.", duration: "8 Weeks", students: "50+", rating: "4.0", level: "Beginner to Advance", price: "Free", internship: true },
-  { id: "introduction-to-linux", icon: Heart, title: "Introduction to Linux Based Systems", desc: "VM workstation, VirtualBox, Dabian, and Ubuntu.", duration: "8 Weeks", students: "50+", rating: "4.0", level: "Beginner to Advance", price: "Free", internship: true },
-  { id: "introduction-to-python", icon: Flag, title: "Introduction to Python", desc: "Python, open-sourse.", duration: "10 Weeks", students: "50+", rating: "4.0", level: "Beginner to Advance", price: "Free", internship: true },
-  { id: "introduction-to-react-tsx-js", icon: Award, title: "Introduction to React, Typescript and Javascript", desc: "React, TypeScript and JavaScript.", duration: "10 Weeks", students: "50+", rating: "4.0", level: "Beginner to Advance", price: "Free", internship: true },
-  { id: "dbm & ms", icon: Code, title: "Database Management & Management Systems", desc: "Kaggle, Google Colab, jupyter-lab, and azure ml.", duration: "8 Weeks", students: "50+", rating: "4.0", level: "Beginner to Advance", price: "Free", internship: true },
+  { id: "data-science-analytics", icon: CheckCircle, title: "Data Science & Analytics", desc: "Kaggle, Google Colab, jupyter-lab, pytorch and azure ml.", duration: "8 Weeks", students: "50+", rating: "4.0", level: "Beginner to Advance", price: "Free", internship: true },
+  { id: "introduction-to-linux", icon: Heart, title: "Introduction to Linux Based Systems", desc: "VM workstation, VirtualBox, Debian, and Ubuntu.", duration: "8 Weeks", students: "50+", rating: "4.0", level: "Beginner to Advance", price: "Free", internship: true },
+  { id: "introduction-to-python", icon: Flag, title: "Introduction to Python", desc: "Python, open-source.", duration: "10 Weeks", students: "50+", rating: "4.0", level: "Beginner to Advance", price: "Free", internship: true },
+  { id: "introduction-to-react-tsx-js", icon: Award, title: "Introduction to React, TypeScript and JavaScript", desc: "React, TypeScript and JavaScript.", duration: "10 Weeks", students: "50+", rating: "4.0", level: "Beginner to Advance", price: "Free", internship: true },
+  { id: "dbm-and-ms", icon: Code, title: "Database Management & Management Systems", desc: "Kaggle, Google Colab, jupyter-lab, and azure ml.", duration: "8 Weeks", students: "50+", rating: "4.0", level: "Beginner to Advance", price: "Free", internship: true },
   { id: "excel", icon: FileSpreadsheet, title: "Introduction to Excel", desc: "Excel basics, data science, and programming.", duration: "8 Weeks", students: "50+", rating: "4.0", level: "Beginner to Advance", price: "Free", internship: true },
-  { id: "networking",  icon: Monitor,  title: "Networking & Systems Administration", desc: "Networking basics, networking tools, system admin, Troubleshooting,lab works.", duration: "10 Weeks", students: "50+", rating: "4.0", level: "Beginner to Advance",  price: "Free", internship: true },
-  { id: "prompting",  icon: Brain,  title: "Prompt Engineering", desc: "Prompting basics, ai tools, engineering, machine language.", duration: "12 Weeks", students: "50+", rating: "4.0", level: "Beginner to Advance",  price: "Free", internship: true },
+  { id: "networking", icon: Monitor, title: "Networking & Systems Administration", desc: "Networking basics, networking tools, system admin, troubleshooting, lab works.", duration: "10 Weeks", students: "50+", rating: "4.0", level: "Beginner to Advance", price: "Free", internship: true },
+  { id: "prompting", icon: Brain, title: "Prompt Engineering", desc: "Prompting basics, AI tools, engineering, machine language.", duration: "12 Weeks", students: "50+", rating: "4.0", level: "Beginner to Advance", price: "Free", internship: true },
   { id: "ethical-hacking", icon: Lock, title: "Ethical Hacking Essentials", desc: "Pen-testing techniques, vulnerability assessment, network security.", duration: "14 Weeks", students: "50+", rating: "4.2", level: "Beginner to Advance", price: "Free", internship: true },
 ];
 
@@ -39,7 +72,9 @@ const Courses = () => {
     getSessionOnce().then(({ data: { session } }) => {
       setIsAuthenticated(!!session);
     });
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
       setIsAuthenticated(!!session);
     });
     return () => subscription.unsubscribe();
@@ -56,7 +91,7 @@ const Courses = () => {
         setCourses(
           data.map((c: any) => ({
             id: c.slug,
-            icon: ICON_MAP[c.icon] || BookOpen,
+            icon: ICON_MAP[c.icon?.toLowerCase?.()] || BookOpen,
             title: c.title,
             desc: c.description,
             duration: c.duration,
@@ -69,7 +104,6 @@ const Courses = () => {
         );
       });
   }, []);
-  
 
   const handleCheckout = async (courseId: string) => {
     setCheckingOut(courseId);
@@ -91,14 +125,19 @@ const Courses = () => {
 
   return (
     <Layout>
-      <Seo title={"Tech Courses & Training Programs | Daryl Tech Academy"} description={"Practical, mentor-led courses in web development, mobile, cloud, cybersecurity and AI with certificates on completion."} path="/courses" jsonLd={courses.map((c) => ({
-        "@context": "https://schema.org",
-        "@type": "Course",
-        name: c.title,
-        description: c.desc,
-        provider: { "@type": "Organization", name: "Daryl Tech & Educational Network", sameAs: "https://darryls-digital-spark.lovable.app/" },
-        url: `https://darryls-digital-spark.lovable.app/courses#${c.id}`,
-      }))} />
+      <Seo
+        title={"Tech Courses & Training Programs | Daryl Tech Academy"}
+        description={"Practical, mentor-led courses in web development, mobile, cloud, cybersecurity and AI with certificates on completion."}
+        path="/courses"
+        jsonLd={courses.map((c) => ({
+          "@context": "https://schema.org",
+          "@type": "Course",
+          name: c.title,
+          description: c.desc,
+          provider: { "@type": "Organization", name: "Daryl Tech & Educational Network", sameAs: "https://darryls-digital-spark.lovable.app/" },
+          url: `https://darryls-digital-spark.lovable.app/courses#${c.id}`,
+        }))}
+      />
       {/* Hero */}
       <section className="relative border-b border-border overflow-hidden">
         <div className="absolute inset-0">
@@ -163,14 +202,24 @@ const Courses = () => {
                 )}
               </div>
               <h3 className="mb-2 text-xl font-semibold">
-                <Link to={`/courses/${course.id}/learn`} className="hover:text-primary transition-colors">{course.title}</Link>
+                <Link to={`/courses/${course.id}/learn`} className="hover:text-primary transition-colors">
+                  {course.title}
+                </Link>
               </h3>
               <p className="mb-6 flex-1 text-sm text-muted-foreground leading-relaxed">{course.desc}</p>
               <div className="mb-6 grid grid-cols-2 gap-3 text-xs text-muted-foreground">
-                <span className="flex items-center gap-1.5"><Clock size={12} /> {course.duration}</span>
-                <span className="flex items-center gap-1.5"><Users size={12} /> {course.students}</span>
-                <span className="flex items-center gap-1.5"><Star size={12} /> {course.rating}</span>
-                <span className="flex items-center gap-1.5"><BookOpen size={12} /> {course.level}</span>
+                <span className="flex items-center gap-1.5">
+                  <Clock size={12} /> {course.duration}
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <Users size={12} /> {course.students}
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <Star size={12} /> {course.rating}
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <BookOpen size={12} /> {course.level}
+                </span>
               </div>
               <div className="flex items-center justify-between border-t border-border pt-4">
                 <span className="text-2xl font-bold text-gradient">{course.price}</span>
@@ -184,9 +233,13 @@ const Courses = () => {
                       onClick={() => handleCheckout(course.id)}
                     >
                       {checkingOut === course.id ? (
-                        <><Loader2 size={12} className="animate-spin" /> Processing...</>
+                        <>
+                          <Loader2 size={12} className="animate-spin" /> Processing...
+                        </>
                       ) : (
-                        <><CreditCard size={12} /> Pay & Enroll</>
+                        <>
+                          <CreditCard size={12} /> Pay & Enroll
+                        </>
                       )}
                     </Button>
                     <Link to="/courses/enroll" className="inline-flex items-center gap-1 text-xs font-medium text-muted-foreground hover:text-primary">
@@ -208,8 +261,12 @@ const Courses = () => {
       <section className="border-y border-border bg-card">
         <div className="container mx-auto px-6 py-24">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mb-12 text-center">
-            <p className="mb-2 text-sm font-mono uppercase tracking-widest text-primary"><Briefcase className="mr-1 inline h-4 w-4" /> Career Opportunities</p>
-            <h2 className="text-3xl font-bold md:text-4xl">Internship <span className="text-gradient">Program</span></h2>
+            <p className="mb-2 text-sm font-mono uppercase tracking-widest text-primary">
+              <Briefcase className="mr-1 inline h-4 w-4" /> Career Opportunities
+            </p>
+            <h2 className="text-3xl font-bold md:text-4xl">
+              Internship <span className="text-gradient">Program</span>
+            </h2>
             <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
               Top-performing students get access to internship placements with our partner companies. Gain real-world experience while learning.
             </p>
@@ -221,7 +278,12 @@ const Courses = () => {
               { title: "Mentorship Program", desc: "Get paired with industry professionals who guide your career development and growth." },
               { title: "Certificate & Recommendation", desc: "Receive internship certificates and recommendation letters upon successful completion." },
             ].map((item, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
                 className="rounded-xl border border-border bg-background p-6"
               >
                 <Briefcase className="mb-3 h-8 w-8 text-primary" />
